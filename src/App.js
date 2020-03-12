@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import Todos from './components/Todos';
 import Header from './components/Header';
 import './App.css';
+import Footer from './components/Footer';
 
 class App extends Component {
   state = {
@@ -32,7 +33,7 @@ class App extends Component {
       }
       return todo;
     }) });
-}
+  }
 
 //Delete Todo
 delTodo = (id) => {
@@ -46,6 +47,7 @@ delTodo = (id) => {
         <Todos todos={this.state.todos} markComplete={this.markComplete}
           delTodo={this.delTodo}
         />
+      <Footer doneItems={this.state.todos}/>
       </div>
     );
   }
