@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 
 const styles = {
     deleteButton: {
-      float: 'right'
+      float: 'right',
+      padding: '0px 10px'
     },
   };
 
@@ -26,7 +27,7 @@ function TodoItem (props){
             <input type="checkbox" onChange={props.markComplete.bind(this, id)}/>
             {' '}
             {title}
-            <Button onClick={props.delTodo.bind(this, id)} className={classes.deleteButton} color="secondary" variant="outlined">x</Button>
+            <Button onClick={props.delTodo.bind(this, id)} className={classes.deleteButton} color="secondary" variant="outlined">delete</Button>
             </p>
         </div>
     )
