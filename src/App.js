@@ -1,12 +1,7 @@
 import React, { Component }  from 'react';
 import './App.css';
-import HobbyContainer from './components/hobbyContainer/HobbyContainer'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu'
+import HobbyContainer from './components/hobbyContainer/HobbyContainer';
+import DashbaordNavBar from './components/DashboardNavBar';
 
 class App extends Component {
   state = {
@@ -47,17 +42,7 @@ delTodo = (id) => {
   render(){
     return (
       <div className="App">
-        <AppBar>
-          <Toolbar>
-            <IconButton edge="start" color="inherit">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6">
-              Productivity Dashboard
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
+        <DashbaordNavBar/>
         <HobbyContainer todos={this.state.todos} markComplete={this.markComplete}
             delTodo={this.delTodo}/>
       </div>

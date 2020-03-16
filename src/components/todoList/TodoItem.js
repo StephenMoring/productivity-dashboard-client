@@ -1,7 +1,6 @@
 import React from 'react';
 import { withStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
-import PropTypes from 'prop-types';
 
 const styles = {
     deleteButton: {
@@ -33,12 +32,6 @@ function TodoItem (props){
     )
 }
 
-//PropTypes
-TodoItem.propTypes = {
-    todo: PropTypes.isRequired,
-    classes: PropTypes.object.isRequired,
-    className: PropTypes.string,
-}   
 
 
 

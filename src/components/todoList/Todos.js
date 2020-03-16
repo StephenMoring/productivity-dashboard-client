@@ -1,6 +1,5 @@
 import React from 'react';
 import TodoItem from './TodoItem';
-import PropTypes from 'prop-types';
 
 
 function Todos (props){
@@ -8,11 +7,6 @@ function Todos (props){
         <TodoItem key={todo.id} todo={todo} markComplete={props.markComplete}
         delTodo={props.delTodo}></TodoItem>
     ));
-}
-
-// PropTypes
-Todos.propTypes = {
-    todos: PropTypes.array.isRequired
 }
 
 export default Todos;
